@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "profile": "default-agent-workflow",
+  "language": "ko",
+  "docs_paths": [
+    "docs"
+  ],
+  "memory_types": [
+    {
+      "type": "principles",
+      "path": "principles.md",
+      "change_policy": "stable",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "decisions",
+      "path": "decisions",
+      "change_policy": "append_only",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "notes",
+      "path": "notes",
+      "change_policy": "mutable",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "plans",
+      "path": "plans",
+      "change_policy": "mutable",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "troubleshooting",
+      "path": "troubleshooting",
+      "change_policy": "cumulative",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "runbooks",
+      "path": "runbooks",
+      "change_policy": "stable",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    },
+    {
+      "type": "reference",
+      "path": "reference",
+      "change_policy": "stable",
+      "authority": "user",
+      "storage_owner": "loom-core",
+      "requires_user_confirmation": true,
+      "provenance_required": true
+    }
+  ],
+  "provenance": {
+    "required": true,
+    "fields": [
+      "source_type",
+      "source_ref",
+      "recorded_at",
+      "actor"
+    ]
+  }
+}

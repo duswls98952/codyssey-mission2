@@ -1,0 +1,5 @@
+{"id": "event-1331961d3d80", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-08-11T07:55:49+00:00", "agent": "foreground", "task_id": "task-20260811-075234-task-61861644"}
+{"id": "event-cac01bda19ea", "type": "foreground_session_done", "message": "Foreground task session completed.", "created_at": "2026-08-11T07:56:22+00:00", "agent": "foreground", "task_id": "task-20260811-075234-task-61861644"}
+{"id": "event-110bf262c6af", "type": "foreground_session_done", "message": "사용자가 산출물과 검증 근거를 직접 확인하고 완료를 확정했습니다.", "created_at": "2026-08-11T07:58:57+00:00", "agent": "web-user", "task_id": "task-20260811-075234-task-61861644"}
+{"id": "event-03e66c07c513", "type": "foreground_session_done", "message": "사용자가 산출물과 검증 근거를 직접 확인하고 완료를 확정했습니다.", "created_at": "2026-08-11T07:59:09+00:00", "agent": "web-user", "task_id": "task-20260811-075234-task-61861644"}
+{"id": "event-7bea1a55c2e6", "type": "foreground_session_done", "message": "사용자가 산출물과 검증 근거를 직접 확인하고 완료를 확정했습니다.", "created_at": "2026-08-11T07:59:24+00:00", "agent": "web-user", "task_id": "task-20260811-075234-task-61861644"}
