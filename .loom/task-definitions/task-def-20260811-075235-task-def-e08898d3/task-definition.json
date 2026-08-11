@@ -4,7 +4,7 @@
   "title": "초기 개발 기록과 제출 증빙 정리",
   "description": "docs/development.md와 docs/screenshots에 초기 개발 환경 및 Git 저장소 설정 증빙을 정리하고, 과제 진행 기록의 첫 커밋을 만든다.",
   "created_at": "2026-08-11T07:52:35+00:00",
-  "updated_at": "2026-08-11T07:52:35+00:00",
+  "updated_at": "2026-08-11T07:56:22+00:00",
   "order_index": 1,
   "legacy_task_id": "task-20260811-075234-task-61861644",
   "depends_on": [],
@@ -19,7 +19,7 @@
     "docs/development.md"
   ],
   "document_output_exceptions": [],
-  "default_agent": "",
+  "default_agent": "foreground",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",

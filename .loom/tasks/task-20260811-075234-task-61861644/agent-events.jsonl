@@ -1,0 +1,2 @@
+{"id": "event-1331961d3d80", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-08-11T07:55:49+00:00", "agent": "foreground", "task_id": "task-20260811-075234-task-61861644"}
+{"id": "event-cac01bda19ea", "type": "foreground_session_done", "message": "Foreground task session completed.", "created_at": "2026-08-11T07:56:22+00:00", "agent": "foreground", "task_id": "task-20260811-075234-task-61861644"}
