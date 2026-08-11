@@ -1,0 +1,14 @@
+{
+  "id": "job-20260811-075227-2-6744fc00",
+  "title": "입학 연수 2기 퀴즈 게임 과제 완성",
+  "goal": "보너스 과제를 제외하고 Python 콘솔 퀴즈 게임과 GitHub 저장소 제출 조건을 충족한다.",
+  "status": "PENDING",
+  "created_at": "2026-08-11T07:52:27+00:00",
+  "updated_at": "2026-08-11T07:52:34+00:00",
+  "context_refs": [],
+  "task_ids": [
+    "task-20260811-075234-task-61861644"
+  ],
+  "branch_name": "main",
+  "checkpoint_ids": []
+}

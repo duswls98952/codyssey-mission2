@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "categories": [
+    {
+      "key": "decision",
+      "label": "판단",
+      "description": "현재 상황에서 선택한 방향과 근거입니다.",
+      "memory_type": "decisions",
+      "category_kind": "policy",
+      "context_policy": "always",
+      "publishable": true,
+      "builtin": true,
+      "archived": false,
+      "sort_order": 10
+    },
+    {
+      "key": "principle",
+      "label": "원칙",
+      "description": "앞으로 반복해서 적용할 안정적인 기준입니다.",
+      "memory_type": "principles",
+      "category_kind": "policy",
+      "context_policy": "always",
+      "publishable": true,
+      "builtin": true,
+      "archived": false,
+      "sort_order": 20
+    },
+    {
+      "key": "domain_knowledge",
+      "label": "도메인 지식",
+      "description": "제품과 업무에서 반복 활용할 수 있는 지식입니다.",
+      "memory_type": "reference",
+      "category_kind": "knowledge",
+      "context_policy": "task_selected",
+      "publishable": true,
+      "builtin": true,
+      "archived": false,
+      "sort_order": 30
+    },
+    {
+      "key": "runbook",
+      "label": "런북",
+      "description": "반복 실행할 수 있는 운영 또는 복구 절차입니다.",
+      "memory_type": "runbooks",
+      "category_kind": "knowledge",
+      "context_policy": "task_selected",
+      "publishable": true,
+      "builtin": true,
+      "archived": false,
+      "sort_order": 40
+    }
+  ]
+}

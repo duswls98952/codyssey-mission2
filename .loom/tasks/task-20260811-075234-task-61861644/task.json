@@ -1,0 +1,32 @@
+{
+  "id": "task-20260811-075234-task-61861644",
+  "job_id": "job-20260811-075227-2-6744fc00",
+  "title": "초기 개발 기록과 제출 증빙 정리",
+  "description": "docs/development.md와 docs/screenshots에 초기 개발 환경 및 Git 저장소 설정 증빙을 정리하고, 과제 진행 기록의 첫 커밋을 만든다.",
+  "status": "PENDING",
+  "created_at": "2026-08-11T07:52:34+00:00",
+  "updated_at": "2026-08-11T07:52:34+00:00",
+  "order_index": 1,
+  "assigned_agent": "",
+  "depends_on": [],
+  "expected_output": "초기 개발 환경과 Git 저장소 설정에 대한 development.md 기록 및 스크린샷 증빙이 저장소에 포함된다.",
+  "done_condition": "development.md가 요구사항 4-1 및 제출물 증빙을 설명하고, 관련 스크린샷과 Loom metadata가 커밋되어 있다.",
+  "in_scope": "docs/development.md, docs/screenshots, Loom workflow metadata",
+  "out_of_scope": "main.py 기능 구현, README 최종 작성, 트러블슈팅 부록 작성",
+  "validation_hint": "git status로 main.py 외 문서/증빙 변경이 커밋 대상인지 확인하고 loom validate --strict를 통과한다.",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/development.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
