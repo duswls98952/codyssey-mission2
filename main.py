@@ -135,7 +135,7 @@ def get_answer_choice():
 def play_quiz(quizzes):
     if len(quizzes) == 0:
         print("등록된 퀴즈가 없습니다.")
-        return
+        return None
 
     score = 0
 
@@ -152,12 +152,14 @@ def play_quiz(quizzes):
 
     print()
     print(f"총 {len(quizzes)}문제 중 {score}문제를 맞혔습니다.")
+    return score
 
 
 class QuizGame:
     def __init__(self):
         self.quizzes = default_quizzes.copy()
         self.best_score = 0
+        self.has_played = False
 
     def add_quiz(self):
         question = get_required_text("문제를 입력하세요: ")
@@ -183,19 +185,36 @@ class QuizGame:
         for index, quiz in enumerate(self.quizzes, start=1):
             print(f"{index}. {quiz.question}")
 
+    def update_best_score(self, score):
+        if score is None:
+            return
+
+        self.has_played = True
+        if score > self.best_score:
+            self.best_score = score
+            print("최고 점수가 갱신되었습니다!")
+
+    def show_score(self):
+        if not self.has_played:
+            print("아직 퀴즈를 푼 기록이 없습니다.")
+            return
+
+        print(f"현재 최고 점수는 {self.best_score}점입니다.")
+
     def run(self):
         while True:
             show_menu()
             menu = get_menu_choice()
 
             if menu == 1:
-                play_quiz(self.quizzes)
+                score = play_quiz(self.quizzes)
+                self.update_best_score(score)
             elif menu == 2:
                 self.add_quiz()
             elif menu == 3:
                 self.list_quizzes()
             elif menu == 4:
-                print("점수 확인")
+                self.show_score()
             elif menu == 5:
                 print("프로그램을 종료합니다.")
                 break
