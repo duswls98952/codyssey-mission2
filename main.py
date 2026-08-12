@@ -100,6 +100,17 @@ def get_menu_choice():
         return choice
 
 
+def get_required_text(prompt):
+    while True:
+        text = input(prompt).strip()
+
+        if text == "":
+            print("빈 입력은 사용할 수 없습니다.")
+            continue
+
+        return text
+
+
 def get_answer_choice():
     while True:
         answer = input("정답 번호를 입력하세요: ").strip()
@@ -148,6 +159,20 @@ class QuizGame:
         self.quizzes = default_quizzes.copy()
         self.best_score = 0
 
+    def add_quiz(self):
+        question = get_required_text("문제를 입력하세요: ")
+
+        choices = []
+        for number in range(1, 5):
+            choice = get_required_text(f"보기 {number} 입력: ")
+            choices.append(choice)
+
+        answer = get_answer_choice()
+        new_quiz = Quiz(question, choices, answer)
+        self.quizzes.append(new_quiz)
+
+        print("퀴즈가 추가되었습니다.")
+
     def run(self):
         while True:
             show_menu()
@@ -156,7 +181,7 @@ class QuizGame:
             if menu == 1:
                 play_quiz(self.quizzes)
             elif menu == 2:
-                print("퀴즈 추가")
+                self.add_quiz()
             elif menu == 3:
                 print("퀴즈 목록")
             elif menu == 4:
