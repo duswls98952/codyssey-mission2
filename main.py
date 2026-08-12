@@ -1,3 +1,18 @@
+class Quiz:
+    def __init__(self, question, choices, answer):
+        self.question = question
+        self.choices = choices
+        self.answer = answer
+
+    def display(self):
+        print(self.question)
+        for index, choice in enumerate(self.choices, start=1):
+            print(f"{index}. {choice}")
+
+    def is_correct(self, user_answer):
+        return user_answer == self.answer
+
+
 def show_menu():
     print("+" * 30)
     print("🧁 베이킹 이모저모")
@@ -14,7 +29,7 @@ def get_menu_choice():
     while True:
         menu = input("번호를 입력하세요: ").strip()
 
-        if menu == "":
+        if menu == "": 
             print("입력값이 비어 있습니다. 1~5 사이의 번호를 입력하세요.")
             continue
 

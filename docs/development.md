@@ -32,7 +32,7 @@
 ![초기 커밋 생성](screenshots/git_commit_Initial_project_setup_.png)
 
 ### GitHub 원격 저장소 push
-![GitHub 원격 저장소 push](screenshots/git-push.png)
+![GitHub 원격 저장소 push](screenshots/git_push.png)
 
 ### pull 상태 확인
 ![pull 상태 확인](screenshots/git_status_git_pull_Already_up_to_date.png)
@@ -53,4 +53,19 @@
 검증 내용:
 - 빈 입력, 문자 입력, 범위 밖 숫자 입력 후 다시 입력받는 흐름 확인
 - `5` 입력 시 프로그램 종료 확인
+
+## 3. Quiz 클래스 구현
+
+관련 요구사항:
+- 4-4. Quiz 클래스
+
+작업 내용:
+- 개별 퀴즈를 표현하는 `Quiz` 클래스 추가
+- 문제 문장, 보기 목록, 정답 번호를 속성으로 저장
+- 문제와 보기를 출력하는 `display()` 메서드 추가
+- 사용자의 답과 정답을 비교하는 `is_correct()` 메서드 추가
+
+검증 내용:
+- `Quiz` 객체 생성 후 문제와 보기 출력 확인
+- 정답 번호 비교 결과 확인
 
