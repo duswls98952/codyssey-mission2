@@ -143,25 +143,31 @@ def play_quiz(quizzes):
     print(f"총 {len(quizzes)}문제 중 {score}문제를 맞혔습니다.")
 
 
-def run_menu():
-    while True:
-        show_menu()
-        menu = get_menu_choice()
+class QuizGame:
+    def __init__(self):
+        self.quizzes = default_quizzes.copy()
+        self.best_score = 0
 
-        if menu == 1:
-            play_quiz(default_quizzes)
-        elif menu == 2:
-            print("퀴즈 추가")
-        elif menu == 3:
-            print("퀴즈 목록")
-        elif menu == 4:
-            print("점수 확인")
-        elif menu == 5:
-            print("프로그램을 종료합니다.")
-            break
+    def run(self):
+        while True:
+            show_menu()
+            menu = get_menu_choice()
+
+            if menu == 1:
+                play_quiz(self.quizzes)
+            elif menu == 2:
+                print("퀴즈 추가")
+            elif menu == 3:
+                print("퀴즈 목록")
+            elif menu == 4:
+                print("점수 확인")
+            elif menu == 5:
+                print("프로그램을 종료합니다.")
+                break
 
 
 try:
-    run_menu()
+    game = QuizGame()
+    game.run()
 except (KeyboardInterrupt, EOFError):
     print("\n입력이 중단되어 프로그램을 안전하게 종료합니다.")
