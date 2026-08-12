@@ -100,13 +100,56 @@ def get_menu_choice():
         return choice
 
 
+def get_answer_choice():
+    while True:
+        answer = input("정답 번호를 입력하세요: ").strip()
+
+        if answer == "":
+            print("입력값이 비어 있습니다. 1~4 사이의 번호를 입력하세요.")
+            continue
+
+        try:
+            choice = int(answer)
+        except ValueError:
+            print("숫자만 입력할 수 있습니다. 1~4 사이의 번호를 입력하세요.")
+            continue
+
+        if choice < 1 or choice > 4:
+            print("잘못된 번호입니다. 1~4 사이의 번호를 입력하세요.")
+            continue
+
+        return choice
+
+
+def play_quiz(quizzes):
+    if len(quizzes) == 0:
+        print("등록된 퀴즈가 없습니다.")
+        return
+
+    score = 0
+
+    for quiz in quizzes:
+        print()
+        quiz.display()
+        user_answer = get_answer_choice()
+
+        if quiz.is_correct(user_answer):
+            print("정답입니다!")
+            score += 1
+        else:
+            print("오답입니다.")
+
+    print()
+    print(f"총 {len(quizzes)}문제 중 {score}문제를 맞혔습니다.")
+
+
 def run_menu():
     while True:
         show_menu()
         menu = get_menu_choice()
 
         if menu == 1:
-            print("퀴즈 풀기")
+            play_quiz(default_quizzes)
         elif menu == 2:
             print("퀴즈 추가")
         elif menu == 3:
