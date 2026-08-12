@@ -1,8 +1,24 @@
+import json
+
+STATE_FILE = "state.json"
+
+
 class Quiz:
     def __init__(self, question, choices, answer):
         self.question = question
         self.choices = choices
         self.answer = answer
+
+    def to_dict(self):
+        return {
+            "question": self.question,
+            "choices": self.choices,
+            "answer": self.answer,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data["question"], data["choices"], data["answer"])
 
     def display(self):
         print(self.question)
@@ -160,6 +176,36 @@ class QuizGame:
         self.quizzes = default_quizzes.copy()
         self.best_score = 0
         self.has_played = False
+        self.load_state()
+
+    def load_state(self):
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as file:
+                data = json.load(file)
+
+            self.quizzes = [
+                Quiz.from_dict(quiz_data)
+                for quiz_data in data.get("quizzes", [])
+            ]
+            self.best_score = data.get("best_score", 0)
+            self.has_played = data.get("has_played", False)
+        except FileNotFoundError:
+            print("저장된 데이터가 없어 기본 퀴즈로 시작합니다.")
+        except (json.JSONDecodeError, KeyError, TypeError):
+            print("저장 파일이 손상되어 기본 퀴즈로 시작합니다.")
+
+    def save_state(self):
+        data = {
+            "quizzes": [quiz.to_dict() for quiz in self.quizzes],
+            "best_score": self.best_score,
+            "has_played": self.has_played,
+        }
+
+        try:
+            with open(STATE_FILE, "w", encoding="utf-8") as file:
+                json.dump(data, file, ensure_ascii=False, indent=2)
+        except OSError:
+            print("저장 중 문제가 발생했습니다.")
 
     def add_quiz(self):
         question = get_required_text("문제를 입력하세요: ")
@@ -172,6 +218,7 @@ class QuizGame:
         answer = get_answer_choice()
         new_quiz = Quiz(question, choices, answer)
         self.quizzes.append(new_quiz)
+        self.save_state()
 
         print("퀴즈가 추가되었습니다.")
 
@@ -193,6 +240,8 @@ class QuizGame:
         if score > self.best_score:
             self.best_score = score
             print("최고 점수가 갱신되었습니다!")
+
+        self.save_state()
 
     def show_score(self):
         if not self.has_played:

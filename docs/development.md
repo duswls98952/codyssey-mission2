@@ -188,3 +188,31 @@
 ### 점수 확인 화면
 ![점수 확인 화면](screenshots/score_check.png)
 
+## 10. state.json 저장 및 불러오기 구현
+
+관련 요구사항:
+- 4-7. 퀴즈 추가 일부
+- 4-9. 점수 확인 일부
+- 4-11. 파일 저장 / 불러오기
+
+작업 내용:
+- `state.json` 저장 파일 경로 정의
+- `Quiz.to_dict()` 메서드 추가
+- `Quiz.from_dict()` 클래스 메서드 추가
+- `QuizGame.load_state()` 메서드 추가
+- `QuizGame.save_state()` 메서드 추가
+- 프로그램 시작 시 저장된 퀴즈와 최고 점수 불러오기
+- 퀴즈 추가 후 상태 저장
+- 퀴즈 풀이 후 최고 점수 및 풀이 여부 저장
+
+검증 내용:
+- `state.json`이 없는 경우 기본 퀴즈로 시작 확인
+- 퀴즈 추가 후 `state.json` 생성 확인
+- 프로그램 재실행 후 추가한 퀴즈 유지 확인
+- 최고 점수 갱신 후 재실행해도 점수 유지 확인
+
+증빙 자료:
+
+### state.json 저장 결과
+![state.json 저장 결과](screenshots/state_json.png)
+
