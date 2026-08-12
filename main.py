@@ -173,6 +173,16 @@ class QuizGame:
 
         print("퀴즈가 추가되었습니다.")
 
+    def list_quizzes(self):
+        if len(self.quizzes) == 0:
+            print("등록된 퀴즈가 없습니다.")
+            return
+
+        print("\n등록된 퀴즈 목록")
+        print("-" * 30)
+        for index, quiz in enumerate(self.quizzes, start=1):
+            print(f"{index}. {quiz.question}")
+
     def run(self):
         while True:
             show_menu()
@@ -183,7 +193,7 @@ class QuizGame:
             elif menu == 2:
                 self.add_quiz()
             elif menu == 3:
-                print("퀴즈 목록")
+                self.list_quizzes()
             elif menu == 4:
                 print("점수 확인")
             elif menu == 5:
