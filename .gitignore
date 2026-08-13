@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .DS_store
 docs/학습기록/
+.loom/
+AGENTS.md
+CLAUDE.md
+test.py
