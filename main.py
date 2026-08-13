@@ -192,7 +192,11 @@ class QuizGame:
         except FileNotFoundError:
             print("저장된 데이터가 없어 기본 퀴즈로 시작합니다.")
         except (json.JSONDecodeError, KeyError, TypeError):
-            print("저장 파일이 손상되어 기본 퀴즈로 시작합니다.")
+            print("저장 파일이 손상되어 기본 퀴즈로 복구합니다.")
+            self.quizzes = default_quizzes.copy()
+            self.best_score = 0
+            self.has_played = False
+            self.save_state()
 
     def save_state(self):
         data = {
