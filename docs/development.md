@@ -213,6 +213,13 @@
 
 증빙 자료:
 
+
+### 퀴즈 추가 화면
+![퀴즈 추가 화면](screenshots/quiz_add.png)
+
+### 재실행 후 추가 퀴즈 목록 확인
+![재실행 후 추가 퀴즈 목록 확인](screenshots/quiz_added_list_after_restart.png)
+
 ### state.json 저장 결과
 ![state.json 저장 결과](screenshots/state_json.png)
 
