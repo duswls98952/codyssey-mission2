@@ -224,3 +224,25 @@
 ### state.json 저장 결과
 ![state.json 저장 결과](screenshots/state_json.png)
 
+
+## 11. clone / pull 흐름 확인
+
+관련 요구사항:
+- 4-13. Git clone / pull 실습
+
+작업 내용:
+- GitHub 원격 저장소를 다른 폴더에 clone
+- clone한 저장소에서 README.md 수정 후 commit / push
+- 기존 작업 폴더에서 git pull을 실행해 원격 변경사항 반영
+
+검증 내용:
+- git clone 명령으로 저장소 복제 확인
+- clone한 저장소에서 push한 커밋을 기존 작업 폴더에서 pull로 가져온 흐름 확인
+
+증빙 자료:
+
+### GitHub 저장소 clone
+![GitHub 저장소 clone](screenshots/git_clone.png)
+
+### 기존 작업 폴더에서 pull 확인
+![기존 작업 폴더에서 pull 확인](screenshots/git_pull_after_clone.png)

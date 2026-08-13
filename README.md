@@ -114,6 +114,6 @@ python3 main.py
 
 추가 증빙:
 - [초기 개발 환경 및 Git 저장소 설정](docs/development.md#1-초기-개발-환경-및-git-저장소-설정)
+- [clone / pull 흐름 확인](docs/development.md#11-clone--pull-흐름-확인)
 - [전체 개발 기록](docs/development.md)
 
-Clone / pull 흐름 확인 완료
