@@ -246,3 +246,24 @@
 
 ### 기존 작업 폴더에서 pull 확인
 ![기존 작업 폴더에서 pull 확인](screenshots/git_pull_after_clone.png)
+
+
+## 12. 최종 Git 기록 확인
+
+관련 요구사항:
+- 4-1. Git 저장소 설정
+- 4-13. Git clone / pull 실습
+
+작업 내용:
+- 최종 커밋 기록 확인
+- 로컬 main 브랜치와 origin/main이 같은 커밋을 가리키는지 확인
+- 기능 구현, 문서 정리, clone / pull 증빙 커밋 흐름 확인
+
+검증 내용:
+- `git log --oneline --graph --decorate -12` 명령으로 최신 커밋 기록 확인
+- `HEAD -> main, origin/main, origin/HEAD`가 최신 커밋에 표시되는지 확인
+
+증빙 자료:
+
+### 최종 Git 커밋 기록
+![최종 Git 커밋 기록](screenshots/final_git_log.png)
